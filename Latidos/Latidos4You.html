@@ -30,7 +30,7 @@
     width: 100%;
     text-align: center;
     color: rgba(255, 255, 255, 0.7);
-    font-size: 1.2em;
+    font-size: 1.4em;
     z-index: 10;
     pointer-events: none;
   }
@@ -200,7 +200,7 @@ function heartbeat(timestamp) {
   if (!lastBeat) lastBeat = timestamp;
   
   const elapsed = timestamp - lastBeat;
-  const beatDuration = 1200; // 1.4 segundos entre latidos
+  const beatDuration = 1400; // 1.4 segundos entre latidos
   
   if (elapsed > beatDuration) {
     // Liberar corazones pequeños y frases en cada latido
