@@ -201,7 +201,7 @@ function heartbeat(timestamp) {
   if (!lastBeat) lastBeat = timestamp;
   
   const elapsed = timestamp - lastBeat;
-  const beatDuration = 1400; // 1.4 segundos entre latidos
+  const beatDuration = 2400; // 1.4 segundos entre latidos
   
   if (elapsed > beatDuration) {
     // Liberar corazones pequeños y frases en cada latido
