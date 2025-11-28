@@ -166,34 +166,36 @@
             height: 100%;
         }
 
-        .message {
-            font-size: clamp(4rem, 8vw, 8rem);
-            font-weight: 700;
-            opacity: 0;
-            position: absolute;
-            transform: translateY(50px);
-            animation: fadeInOut 34s ease-in-out infinite;
-            text-shadow: 
-                0 0 20px rgba(255, 255, 255, 0.9),
-                0 0 40px rgba(255, 255, 255, 0.6),
-                0 0 60px rgba(255, 255, 255, 0.3);
-            transition: opacity 2.8s ease, transform 4.8s ease;
-            width: 100%;
-            line-height: 1.2;
-            letter-spacing: 0.02em;
-        }
-        .message:nth-child(1) { animation-delay: 4s; }
-        .message:nth-child(2) { animation-delay: 10s; }
-        .message:nth-child(3) { animation-delay: 14s; }
-        .message:nth-child(4) { animation-delay: 18s; }
-        .message:nth-child(5) { animation-delay: 22s; }
-        .message:nth-child(6) { animation-delay: 26s; }
-        .message:nth-child(7) { animation-delay: 31s; }
+.message {
+    font-size: clamp(4rem, 8vw, 8rem);
+    font-weight: 700;
+    opacity: 0;
+    position: absolute;
+    transform: translateY(50px);
+    animation: fadeInOut 6s ease-in-out forwards; /* duración de cada mensaje */
+    text-shadow: 
+        0 0 20px rgba(255, 255, 255, 0.9),
+        0 0 40px rgba(255, 255, 255, 0.6),
+        0 0 60px rgba(255, 255, 255, 0.3);
+    width: 100%;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
 
-        @keyframes fadeInOut {
-            0%, 25%, 100% { opacity: 0; transform: translateY(50px); }
-            8%, 17% { opacity: 1; transform: translateY(0); }
-        }
+/* Delays para que no se superpongan */
+.message:nth-child(1) { animation-delay: 0s; }
+.message:nth-child(2) { animation-delay: 6s; }
+.message:nth-child(3) { animation-delay: 12s; }
+.message:nth-child(4) { animation-delay: 18s; }
+.message:nth-child(5) { animation-delay: 24s; }
+.message:nth-child(6) { animation-delay: 30s; }
+.message:nth-child(7) { animation-delay: 36s; }
+
+@keyframes fadeInOut {
+    0%, 15% { opacity: 0; transform: translateY(50px); }
+    10%, 85% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-50px); }
+}
 
         .heart {
             display: inline-block;
@@ -766,6 +768,7 @@
 </body>
 
 </html>
+
 
 
 
