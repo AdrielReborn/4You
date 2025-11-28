@@ -244,27 +244,6 @@
     </style>
 </head>
 <body>
-        <!-- Reproductor de música -->
-    <div class="music-player" id="musicPlayer">
-      <button class="play-pause-btn" id="playPauseBtn">
-        <svg id="playIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8 5v14l11-7z"/>
-        </svg>
-        <svg id="pauseIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
-          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-        </svg>
-      </button>
-      <div class="progress-container">
-        <div class="song-info">Princesa, Te dedico esta canción ❤️</div>
-        <div class="progress-bar" id="progressBar">
-          <div class="progress-fill" id="progressFill"></div>
-        </div>
-        <div class="time-display">
-          <span id="currentTime">0:00</span>
-          <span id="totalTime">0:00</span>
-        </div>
-      </div>
-    </div>
     <canvas id="starrySky"></canvas>
 
     <div class="message-container">
@@ -293,7 +272,7 @@
         const particles = [];
 
         let lastFireworkTime = 0;
-        const fireworkCooldown = 150; // 300ms entre fuegos artificiales
+        const fireworkCooldown = 350; // 300ms entre fuegos artificiales
         
         // Sistema de música robusto - MODIFICADO para inicializar en el primer clic
         let audio = null;
@@ -763,9 +742,31 @@
 
         animate();
     </script>
+        <!-- Reproductor de música -->
+    <div class="music-player" id="musicPlayer">
+      <button class="play-pause-btn" id="playPauseBtn">
+        <svg id="playIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        <svg id="pauseIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+        </svg>
+      </button>
+      <div class="progress-container">
+        <div class="song-info">Princesa, Te dedico esta canción ❤️</div>
+        <div class="progress-bar" id="progressBar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="time-display">
+          <span id="currentTime">0:00</span>
+          <span id="totalTime">0:00</span>
+        </div>
+      </div>
+    </div>
 </body>
 
 </html>
+
 
 
 
